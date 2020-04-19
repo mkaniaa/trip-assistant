@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Row, Col, Card } from 'react-materialize'
+import { Card } from 'react-materialize'
 
 const UserCard = (props) => {
     const { cardVisible } = props;
@@ -8,20 +8,19 @@ const UserCard = (props) => {
     return( 
         <div>
             { cardVisible &&
-                <Row>
-                    <Col s={2} offset={'s10'}>
-                        <Card 
-                            actions={[
-                                <Link to='/'>Edit profile</Link>,
-                                <Link to='/signedout'>Log out</Link>
-                            ]}
-                            className="user-card" 
-                            title="Marek Kania"
-                        >
-                            <p>mkaniaa@gmail.com</p>
-                        </Card>
-                    </Col>
-                </Row>
+                <Card 
+                    actions={[
+                        <Link to='/'><nobr>Edit profile</nobr></Link>,
+                        <Link to='/signedout'><nobr>Log out</nobr></Link>
+                    ]}
+                    className="user-card hide-on-med-and-down"
+                    header={ <img className="circle user-img-card" alt="" src={ require("../../img/user-icon.jpg") } /> } 
+                    horizontal
+                    title="Marek Kania"
+                    align="center"
+                >
+                    <p>mkaniaa@gmail.com</p>
+                </Card>
             }
         </div>
     )

@@ -1,3 +1,37 @@
+// Breakpoints
+$bp-small: 400px;
+$bp-medium: 600px;
+$bp-large: 993px;
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+
 .btn {
     text-transform: none;
+}
+
+.burger{
+    float: left;
+    position: relative;
+    z-index: 999;
+    height: 56px;
+    line-height: 56px;
+    padding: 0 15px;
+
+    @media #{$mq-small} {
+        margin: 0 18px;
+        padding: 0 18px;
+    }
+
+    @media #{$mq-medium} {
+        height: 64px;
+        line-height: 64px;
+        padding: 0 28px;
+    }
+
+    @media #{$mq-large} {
+        display: none !important;
+    }
 }

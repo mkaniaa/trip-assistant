@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Navbar, NavItem } from 'react-materialize'
 import UserCard from './UserCard'
+import SideNavbar from './SideNavbar'
 
 class TopNavbar extends Component {
     
@@ -20,20 +21,18 @@ class TopNavbar extends Component {
 
         return (
             <div>
+                <SideNavbar className="hide-on-large-only"/>
                 <div className="navbar-fixed">
                     <Navbar
                         alignLinks="right"
                         brand={<Link to='/' className="brand-logo">TripAssistant</Link>}
                         className="top-navbar blue-grey darken-2"
+                        menuIcon={<div></div>}
                     >
+                        <NavLink to='/customers'>Customer collection</NavLink>
+                        <NavLink to='/select-trip'>Open trip</NavLink>
                         <NavItem>
-                            <NavLink to='/customers'>Customer collection</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to='/select-trip'>Open trip</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <span className='btn btn-floating blue lighten-1' onClick={this.handleClick}>User</span>
+                            <span className='btn btn-floating blue lighten-1 noselect' onClick={this.handleClick}>User</span>
                         </NavItem>
                     </Navbar>
                 </div>
