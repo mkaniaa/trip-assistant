@@ -4,3 +4,38 @@
     position: absolute;
     top: 0;
 }
+
+.side-navbar .sidnav-user-data {
+    position: relative;
+    height: 60px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+    .inline {
+        vertical-align: middle;
+        display: inline-block;
+        text-align: center;
+
+        .user-img-sidenav {
+            width: 60px;
+            height: 60px;
+            margin: 0px 15px 20px 32px;
+        }
+    }
+
+    .user-info {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        h5 {
+            margin-top: 0px;
+            margin-bottom: 1px;
+        }
+    
+        p {
+            margin: 1px;
+        }
+    }
+}

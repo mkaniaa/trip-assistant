@@ -35,3 +35,14 @@ $mq-large: "(min-width: #{$bp-large})";
         display: none !important;
     }
 }
+
+.sidenav-close{
+    a {
+        padding: 0 !important;
+        width: 50px;
+
+        i {
+            margin-left: 13px !important;
+        }
+    }
+}
