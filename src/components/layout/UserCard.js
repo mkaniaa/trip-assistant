@@ -8,10 +8,10 @@ const UserCard = (props) => {
     return( 
         <div>
             { cardVisible &&
-                <Card 
+                <Card
                     actions={[
-                        <Link to='/'><nobr>Edit profile</nobr></Link>,
-                        <Link to='/signedout'><nobr>Log out</nobr></Link>
+                        <Link to='/' key="edit-profile"><nobr>Edit profile</nobr></Link>,
+                        <Link to='/signedout' key="log-out"><nobr>Log out</nobr></Link>
                     ]}
                     className="user-card hide-on-med-and-down"
                     header={ <img className="circle user-img-card" alt="" src={ require("../../img/user-icon.jpg") } /> } 
