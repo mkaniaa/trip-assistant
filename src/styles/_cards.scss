@@ -63,18 +63,94 @@
 
 .trip-card-carousel {
 
-    @media #{$mq-large} {
-        transform: scale(1.5, 1.5);
+    @media #{$mq-small} {
+        min-height: 350px;
+
+        .trip-card {
+            width: 300px;
+            height: 220px;
+            margin-left: -25%;
+            margin-top: -10%;
+
+            .card-content {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+
+                .card-title {
+                    width: 250px;
+                }
+            }
+        }
+
+        .trip-card-image {
+            margin-bottom: 20px;
+            margin-top: 5px;
+            font-size: 6rem;
+        }
     }
 
-    .trip-card {
-        width: 300px;
-        margin-left: -25%;
+    @media #{$mq-medium} {
+        min-height: 500px;
+
+        .trip-card {
+            width: 400px;
+            height: 300px;
+            margin-left: -50%;
+            margin-top: -10%;
+
+            .card-content {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+
+                .card-title {
+                    width: 350px;
+                }
+            }
+        }
+
+        .trip-card-image {
+            margin-bottom: 20px;
+            margin-top: 5px;
+            font-size: 8rem;
+        }
     }
-    
-    .trip-card-image {
-        margin-bottom: 20px;
-        margin-top: 10px;
+
+    @media #{$mq-large} {
+        min-height: 600px;
+
+        .trip-card {
+            width: 500px;
+            height: 300px;
+            margin-left: -70%;
+            margin-top: -10%;
+
+            .card-content {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+
+                .card-title {
+                    width: 450px;
+                }
+            }
+        }
+
+        .trip-card-image {
+            margin-bottom: 20px;
+            margin-top: 5px;
+            font-size: 10rem;
+        }
     }
 
     .indicators{
